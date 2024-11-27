@@ -5,6 +5,7 @@ import { professionlDetailsRoutes } from "./professional-details";
 import { apprenticeRoutes } from "./apprentice-routes";
 import { specialitiesRoutes } from "./speciality-routes";
 import { customTrainingGoalRoutes } from "./custom-training-routes";
+import { trainingActivitiesRouter } from "./training-activities-routes";
 export const routes = () => {
     const router = Express.Router();
 
@@ -14,7 +15,8 @@ export const routes = () => {
     router.use(professionlDetailsRoutes());
     router.use(apprenticeRoutes());
     router.use(customTrainingGoalRoutes());
-
+    
+    router.use(trainingActivitiesRouter);
 
     return router;
 }
