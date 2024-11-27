@@ -1,0 +1,7 @@
+{
+    "HOST": "mysql.railway.internal",
+    "DB_PORT": 3306,
+    "USER": "root",
+    "PASSWORD": "JDnIXIAHfBndLDNQZgjEcVfcNTacoFZG",
+    "DATABASE": "railway"
+}
