@@ -1,8 +1,10 @@
-
 import Express from "express";
-
+import swaggerUi from "swagger-ui-express";
+import swaggerConfig from "../swaggerConfig";
 import { routes } from "./infrastructure/routes/index-router";
 import middleware404 from "./infrastructure/modules/middleware/middleware";
+
+
 
 const createServer = async () => {
     const app = Express();
@@ -13,6 +15,7 @@ const createServer = async () => {
         res.send({ msg: "Welcome to Gym management main service" });
     });
     app.use("/api/v1", routes());
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerConfig));
     app.use(middleware404);
 
     const PORT = process.env.PORT || 3001;

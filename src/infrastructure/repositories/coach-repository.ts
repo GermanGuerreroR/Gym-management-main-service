@@ -2,6 +2,7 @@
 import { FieldPacket, ResultSetHeader, Pool, RowDataPacket } from "mysql2/promise";
 import { Coach } from "../../domain/models/Coach";
 import { getPoolConnection } from "./config/data-source";
+import { PersonalInfoClass } from "../../domain/models/PersonalInfo";
 
 export class CoachRepository {
     async addCoach(coach: Coach): Promise<ResultSetHeader> {
@@ -34,7 +35,7 @@ export class CoachRepository {
         return result[0];
     }
 
-    async updateCoach(coach: Coach, id: number) {
+    async updateCoach(coach: PersonalInfoClass, id: number) {
         const connection = getPoolConnection();
         const querySql = `UPDATE coaches SET name= ?, gender=?, date_birth=?, email=?, user_name=?, password=?  WHERE id_coach =?`;
         const values = [coach.personalInfo.name, coach.personalInfo.gender, coach.personalInfo.dateBirth, coach.personalInfo.email, coach.personalInfo.userName, coach.personalInfo.password, id];

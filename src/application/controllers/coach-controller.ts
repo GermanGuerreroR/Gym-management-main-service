@@ -8,7 +8,7 @@ import { CoachDto } from "../../infrastructure/dto/coach-dto";
 import { CoachRepository } from "../../infrastructure/repositories/coach-repository";
 import { ProfessionalDetailsRepository } from "../../infrastructure/repositories/professional-details";
 import { validationID } from "../utils/validationID";
-
+import { PersonalInfoClass } from "../../domain/models/PersonalInfo";
 
 export class CoachController {
     constructor(
@@ -73,23 +73,23 @@ export class CoachController {
         }
     }
 
-    // async update(personalInfo: PersonalInfo, id: number) {
-    //     try {
-    //         if (validationID(id)) return validationID(id);
-    //         const dto = new CoachDto(personalInfo);
-    //         const errores = await dto.validateDto();
-    //         if (errores.length > 0) return { ok: false, message: "The Request has error", error: errores }
+    async update(personalInfo: PersonalInfo, id: number) {
+        try {
+            if (validationID(id)) return validationID(id);
+            const dto = new CoachDto(personalInfo);
+            const errores = await dto.validateDto();
+            if (errores.length > 0) return { ok: false, message: "The Request has error", error: errores }
 
 
-    //         const coach = new Coach(personalInfo);
-    //         const result = await this.repositoryPersonalInfo.updateCoach(coach, id)
-    //         if (result.affectedRows === 1) return { ok: true, message: `The coach with ID ${id} was successfully updated` };
+            const coach = new PersonalInfoClass(personalInfo);
+            const result = await this.repositoryPersonalInfo.updateCoach(coach, id)
+            if (result.affectedRows === 1) return { ok: true, message: `The coach with ID ${id} was successfully updated` };
 
-    //     } catch (error) {
-    //         throw { ok: false, message: "An unexpected error has occurred", error }
-    //     }
+        } catch (error) {
+            throw { ok: false, message: "An unexpected error has occurred", error }
+        }
 
-    // }
+    }
 
 
     async delete(id: number) {
