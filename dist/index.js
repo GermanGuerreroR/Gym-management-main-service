@@ -22,7 +22,7 @@ const createServer = () => __awaiter(void 0, void 0, void 0, function* () {
     const app = (0, express_1.default)();
     app.use(express_1.default.json());
     app.get("/api", (req, res) => {
-        res.send({ msg: "Welcome to Gym management main service" });
+        res.send({ msg: "Welcome to Gym management main service 💪🎽" });
     });
     app.use("/api/v1", (0, index_router_1.routes)());
     app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swaggerConfig_1.default));
