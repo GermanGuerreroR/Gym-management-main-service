@@ -16,7 +16,11 @@ const swaggerOptions = {
         servers: [
             {
                 url: "http://localhost:3001/api/v1"
-            }
+            },
+            {
+                url: "gym-management-main-service-production.up.railway.app"
+            },
+
         ]
     },
     //  apis: [path_1.default.join(__dirname, "./src/infrastructure/routes/*.ts")]
