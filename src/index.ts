@@ -1,6 +1,6 @@
 import Express from "express";
 import swaggerUi from "swagger-ui-express";
-import swaggerConfig from "../swaggerConfig";
+import swaggerConfig from "./swaggerConfig";
 import { routes } from "./infrastructure/routes/index-router";
 import middleware404 from "./infrastructure/modules/middleware/middleware";
 

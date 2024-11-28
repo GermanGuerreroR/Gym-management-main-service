@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const swagger_ui_express_1 = __importDefault(require("swagger-ui-express"));
-const swaggerConfig_1 = __importDefault(require("../swaggerConfig"));
+const swaggerConfig_1 = __importDefault(require("./swaggerConfig"));
 const index_router_1 = require("./infrastructure/routes/index-router");
 const middleware_1 = __importDefault(require("./infrastructure/modules/middleware/middleware"));
 const config_1 = __importDefault(require("config"));
