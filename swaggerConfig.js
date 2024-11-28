@@ -23,8 +23,8 @@ const swaggerOptions = {
 
         ]
     },
-    // apis: [path_1.default.join(__dirname, "./src/infrastructure/routes/*.ts")]
-    apis: [path_1.default.join(__dirname, "/src/infrastructure/routes/*.ts")]
+    apis: [path_1.default.join(__dirname, "./src/infrastructure/routes/*.ts")]
+    //apis: [path_1.default.join(__dirname, "/src/infrastructure/routes/*.ts")]
     // apis: [path_1.default.join(__dirname, "./dist/infrastructure/routes/*.js")]
 
 
