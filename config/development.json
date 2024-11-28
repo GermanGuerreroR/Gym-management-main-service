@@ -1,7 +1,7 @@
 {
-    "HOST": "localhost",
-    "DB_PORT": 3306,
+    "HOST": "junction.proxy.rlwy.net",
+    "DB_PORT": 27265,
     "USER": "root",
-    "PASSWORD": "german950901",
-    "DATABASE": "gym_management_main_service"
+    "PASSWORD": "ydDiEgkZUCRTSJqBFLQrmaEQhMzJnXam",
+    "DATABASE": "railway"
 }
