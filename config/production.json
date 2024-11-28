@@ -1,7 +1,7 @@
 {
-    "HOST": "mysql.railway.internal",
-    "DB_PORT": 3306,
+    "HOST": "junction.proxy.rlwy.net",
+    "DB_PORT": 27265,
     "USER": "root",
-    "PASSWORD": "JDnIXIAHfBndLDNQZgjEcVfcNTacoFZG",
+    "PASSWORD": "ydDiEgkZUCRTSJqBFLQrmaEQhMzJnXam",
     "DATABASE": "railway"
 }
