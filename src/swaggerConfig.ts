@@ -19,7 +19,9 @@ const swaggerOptions = {
         ]
     },
 
-    apis: [path.join(__dirname, "./src/infrastructure/routes/*.ts")]
+    // apis: [path.join(__dirname, "./infrastructure/routes/*.ts")]
+
+    apis: [path.join(__dirname, "./infrastructure/routes/*.ts")]
 
 
 };
