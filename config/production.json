@@ -3,5 +3,8 @@
     "DB_PORT": 27265,
     "USER": "root",
     "PASSWORD": "ydDiEgkZUCRTSJqBFLQrmaEQhMzJnXam",
-    "DATABASE": "railway"
+    "DATABASE": "railway",
+    "REPORT_SERVICE": {
+        "URL": "microservices-gym-report-production.up.railway.app"
+    }
 }
