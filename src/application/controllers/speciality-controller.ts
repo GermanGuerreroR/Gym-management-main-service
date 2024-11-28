@@ -17,7 +17,7 @@ export class SpecialityController {
             if (errors.length > 0) return { ok: false, message: "The Request has error", error: errors };
             const speciality = new Speciality(specialityInfo)
             const result = await this.repository.addSpeciality(speciality, id);
-            return result ? { ok: true, msg: `Speciality added successfully`, id: `Coach ${result.insertId}` } : { ok: false, message: "Speciality not added " }
+            return result ? { ok: true, msg: `Speciality added successfully`, id: `Coach ${id}` } : { ok: false, message: "Speciality not added " }
         } catch (error: any) {
             throw { ok: false, message: "An unexpected error has occurred", error };
         };
@@ -36,7 +36,7 @@ export class SpecialityController {
         try {
             if (validationID(id)) return validationID(id);
             const result = await this.repository.getSpeciality(id);
-            return result.length === 1 ? { ok: true, message: result[0] } : { ok: false, message: "Coach speciality not found." };
+            return result.length > 0 ? { ok: true, message: result } : { ok: false, message: "Coach speciality not found." };
         } catch (error) {
             throw { ok: false, message: "An unexpected error has occurred", error }
         }

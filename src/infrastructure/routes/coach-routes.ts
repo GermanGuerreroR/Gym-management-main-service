@@ -61,7 +61,7 @@ export const coachRoutes = () => {
  *                   educationLevel:
  *                     type: string
  *                     description: Nivel educativo del entrenador.
- *                     example: Praktikant
+ *                     example: University
  *     responses:
  *       200:
  *         description: Entrenador creado exitosamente.
@@ -135,7 +135,7 @@ export const coachRoutes = () => {
   * @swagger
   * /coaches:
   *   get:
-  *     summary: Get all coaches
+  *     summary: Obtener todos los entrenadores
   *     description: Obtiene una lista de todos los entrenadores.
   *     tags:
   *       - Coach

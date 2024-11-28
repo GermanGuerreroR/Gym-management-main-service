@@ -5,7 +5,7 @@ const swaggerOptions = {
     swaggerDefinition: {
         openapi: "3.0.0",
         info: {
-            title: "Gym management service API 😎 ",
+            title: "Gym management service API 💪 ",
             version: "1.0.0",
             description: "Gym management main service API-REST"
         },
@@ -15,7 +15,7 @@ const swaggerOptions = {
             }
         ]
     },
-    // apis: [path.join(__dirname, "./dist/infrastructure/routes/*.js")]
+
     apis: [path.join(__dirname, "./src/infrastructure/routes/*.ts")]
 
 

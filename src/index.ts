@@ -4,6 +4,7 @@ import swaggerConfig from "../swaggerConfig";
 import { routes } from "./infrastructure/routes/index-router";
 import middleware404 from "./infrastructure/modules/middleware/middleware";
 
+import config from 'config';
 
 
 const createServer = async () => {
@@ -23,6 +24,8 @@ const createServer = async () => {
         console.log(`SERVER Api-Rest RUN: http://localhost:${PORT}`);
     });
 };
+const urlBase = config.get<string>('REPORT_SERVICE.URL');
+
 
 createServer();
 

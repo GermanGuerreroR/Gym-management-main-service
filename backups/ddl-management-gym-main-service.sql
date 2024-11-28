@@ -67,16 +67,10 @@ CREATE TABLE apprentices_additional_info (
         'Intermediate',
         'Advanced'
     ) NOT NULL,
-    weight DECIMAL(6, 3) NOT NULL CHECK (
-        weight >= 0.500
-        AND weight <= 300.000
-    ), -- Peso entre 0.5 kg y 300.0 kg
-    height DECIMAL(5, 2) NOT NULL CHECK (
-        height >= 0.50
-        AND height <= 2.50
-    ), -- Altura entre 0.50 m y 2.50 m
-    id_coach_fk INT NOT NULL,
-    id_apprentice_fk INT NOT NULL, -- Esta es la clave foránea para referenciar la tabla `apprentices`
+    weight DECIMAL(6, 3) NOT NULL,
+    height DECIMAL(5, 2) NOT NULL,
+    id_coach_fk INT,
+    id_apprentice_fk INT NOT NULL,
     FOREIGN KEY (id_apprentice_fk) REFERENCES apprentices (id_apprentice) ON DELETE CASCADE,
     FOREIGN KEY (id_coach_fk) REFERENCES coaches (id_coach) ON DELETE SET NULL
 );
@@ -86,6 +80,11 @@ CREATE TABLE custom_training_goals (
     custom_goal_description VARCHAR(255) NOT NULL,
     id_apprentice_fk INT,
     FOREIGN KEY (id_apprentice_fk) REFERENCES apprentices (id_apprentice) ON DELETE CASCADE
+);
+
+CREATE TABLE activity_categories (
+    id_category INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE training_activities (
@@ -98,9 +97,4 @@ CREATE TABLE training_activities (
     FOREIGN KEY (id_apprentice_fk) REFERENCES apprentices (id_apprentice) ON DELETE CASCADE,
     FOREIGN KEY (id_coach_fk) REFERENCES coaches (id_coach) ON DELETE SET NULL,
     FOREIGN KEY (id_category_fk) REFERENCES activity_categories (id_category) ON DELETE RESTRICT
-);
-
-CREATE TABLE activity_categories (
-    id_category INT AUTO_INCREMENT PRIMARY KEY,
-    category_name VARCHAR(50) NOT NULL UNIQUE
 );

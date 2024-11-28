@@ -3,5 +3,8 @@
     "DB_PORT": 3306,
     "USER": "root",
     "PASSWORD": "german950901",
-    "DATABASE": "gym_management_main_service"
+    "DATABASE": "gym_management_main_service",
+    "REPORT_SERVICE": {
+        "URL": "http://localhost:3002/api/v1/reports"
+    }
 }
