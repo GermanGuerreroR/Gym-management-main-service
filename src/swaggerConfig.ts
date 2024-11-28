@@ -21,7 +21,9 @@ const swaggerOptions = {
 
     // apis: [path.join(__dirname, "./infrastructure/routes/*.ts")]
 
-    apis: [path.join(__dirname, "./infrastructure/routes/*.ts")]
+    //apis: [path.join(__dirname, "./infrastructure/routes/*.ts")]
+    apis: [path.join(__dirname, "./dist/infrastructure/routes/*.js")]
+
 
 
 };
